@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" type="image/png" href="./logo/Sem nome (40 x 40 px).png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Feminicídio</title>
+</head>
+
+<body>
+    <div class="audio-player">
+        <button class="audio-btn" id="audioBtn" onclick="toggleAudio()">▶</button>
+        <audio id="audioPoesia"
+            src="./audio/Diga não à violência doméstica - Hoje eu recebi flores - Luisa Naves (128k).mp3"></audio>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════
+       SEÇÃO 1 — HERO
+  ══════════════════════════════════════════ -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-symbol">♀</div>
+            <h1 class="hero-title">Feminicídio</h1>
+            <p class="hero-tagline">Elas existiram. Elas importam. Nunca esquecer.</p>
+            <div class="hero-quote">
+                <span class="quote-mark"></span>
+                <br> Ela não morreu de acidente.<br />
+                Ela não morreu de doença.<br />
+                <strong>Ela foi morta — por ser mulher.</strong>
+                <span class="quote-mark closing">"</span>
+            </div>
+            <p class="hero-text">
+                Feminicídio é o assassinato de uma mulher motivado pelo simples fato de ela ser mulher.
+                Não é crime passional. Não é tragédia do destino. É a forma mais extrema de uma violência
+                que começa muito antes — em palavras, controles, humilhações e silêncios.
+                É o fim de uma história que poderia ter sido interrompida.
+            </p>
+        </div>
+    </header>
+    <main>
+        <!-- ══════════════════════════════════════════
+       SEÇÃO 2 — CARDS DAS VÍTIMAS
+  ══════════════════════════════════════════ -->
+        <section class="section-cards">
+            <div class="section-title-wrap">
+                <div class="section-line"></div>
+                <h2 class="section-title">Vítimas do Brasil</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="section-sub">Clique em cada card para conhecer a história dela</p>
+
+            <div class="grid" id="grid">
+
+                <!-- CARD 1 -->
+                <div class="card" data-num="1" data-name="Gislaine Beatriz Rodrigues Duarte"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/bombeira civil.png"
+                    data-desc="Gislaine Beatriz Rodrigues Duarte, 31 anos, foi a primeira vítima de feminicídio no território gaúcho em 2025, em 3 de janeiro. Bombeira civil, foi morta com sete facadas dentro de casa, em Guaíba, na Região Metropolitana de Porto Alegre. Ela não tinha medida protetiva — o companheiro também não possuía nenhuma restrição judicial contra ele. Deixou um filho de dez anos. O companheiro, de 44 anos, foi preso preventivamente."
+                    onclick="openModal(this)">
+                    <span class="card-num">1</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/bombeira civil.png -->
+                        <img src="./imagens/bombeira civil.png" alt="Gislaine Beatriz Rodrigues Duarte" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Gislaine Beatriz Rodrigues Duarte</span>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card" data-num="2" data-name="Letícia Foster Rodrigues"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Letícias.png"
+                    data-desc="Letícia Foster Rodrigues, 37 anos, teve o corpo encontrado em uma plantação de soja no dia 13 de janeiro, na área do primeiro distrito de Canguçu, no Sul gaúcho. Ela tinha ferimento de corte no pescoço. O companheiro, de 36 anos, foi preso. O casal tinha um filho de quatro anos."
+                    onclick="openModal(this)">
+                    <span class="card-num">2</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Letícias.png -->
+                        <img src="./imagens/Letícias.png" alt="Letícia Foster Rodrigues" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Letícia Foster Rodrigues</span>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="card" data-num="3" data-name="Marinês Teresinha Schneider"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Marinês Teresinha Schneider.jpg"
+                    data-desc="Marinês Teresinha Schneider, 54 anos, foi alvejada com revólver no dia 18 de janeiro, em Santa Rosa, no Noroeste gaúcho. Um homem de 57 anos, ex-companheiro da vítima, teria invadido a casa dela e cometido o crime. Ele se entregou à Delegacia da Mulher no dia seguinte."
+                    onclick="openModal(this)">
+                    <span class="card-num">3</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Marinês Teresinha Schneider.jpg -->
+                        <img src="./imagens/Marinês Teresinha Schneider.jpg" alt="Marinês Teresinha Schneider" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Marinês Teresinha Schneider</span>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card" data-num="4" data-name="Josiane Natel Alves" data-category="Vítima de Feminicídio"
+                    data-img="./imagens/Josiane Natel Alves ano de morte.png"
+                    data-desc="Josiane Natel Alves, 32 anos, sofreu nove golpes de faca em 18 de janeiro, no bairro Campo Novo, na zona Sul de Porto Alegre. Ela morava com a filha de 14 anos, que presenciou o crime na rua das Rosas. Também deixou outros dois filhos. O ex-companheiro, de 29 anos, foi preso em flagrante."
+                    onclick="openModal(this)">
+                    <span class="card-num">4</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Josiane Natel Alves ano de morte.png -->
+                        <img src="./imagens/Josiane Natel Alves ano de morte.png" alt="Josiane Natel Alves" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Josiane Natel Alves</span>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="card" data-num="5" data-name="Paula Gabriela Torres Pereira"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Paula Gabriela Torres Pereira.png"
+                    data-desc="Paula Gabriela Torres Pereira, 39 anos, foi esfaqueada em uma parada de ônibus no bairro Chapéu do Sol, zona Sul de Porto Alegre, em 19 de janeiro. O suspeito é um ex-companheiro de 50 anos, que foi preso. Eles disputavam na Justiça a guarda da filha de cinco anos. A vítima deixou outras duas filhas, de 12 e 15 anos."
+                    onclick="openModal(this)">
+                    <span class="card-num">5</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Paula Gabriela Torres Pereira.png -->
+                        <img src="./imagens/Paula Gabriela Torres Pereira.png" alt="Paula Gabriela Torres Pereira" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Paula Gabriela Torres Pereira</span>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="card" data-num="6" data-name="Mirella dos Santos da Silva"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Mirella dos Santos da Silva.png"
+                    data-desc="Mirella dos Santos da Silva, 15 anos, foi morta a facadas no dia 20 de janeiro, no bairro Cohab, em Sapucaia do Sul, na Região Metropolitana de Porto Alegre. O namorado dela, de 25 anos, foi preso em flagrante."
+                    onclick="openModal(this)">
+                    <span class="card-num">6</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Mirella dos Santos da Silva.png -->
+                        <img src="./imagens/Mirella dos Santos da Silva.png" alt="Mirella dos Santos da Silva" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Mirella dos Santos da Silva</span>
+                </div>
+
+                <!-- CARD 7 -->
+                <div class="card" data-num="7" data-name="Uliana Teresinha Fagundes"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Uliana Teresinha Fagundes.png"
+                    data-desc="Uliana Teresinha Fagundes, 59 anos, foi assassinada a tiros no dia 20 de janeiro em Muitos Capões, na Serra gaúcha. O suspeito é o companheiro dela, também de 59 anos, que fugiu após o crime."
+                    onclick="openModal(this)">
+                    <span class="card-num">7</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Uliana Teresinha Fagundes.png -->
+                        <img src="./imagens/Uliana Teresinha Fagundes.png" alt="Uliana Teresinha Fagundes" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Uliana Teresinha Fagundes</span>
+                </div>
+
+                <!-- CARD 8 -->
+                <div class="card" data-num="8" data-name="Karizele Oliveira Senna" data-category="Vítima de Feminicídio"
+                    data-img="./imagens/Karizele Oliveira Senna.png"
+                    data-desc="Karizele Oliveira Senna, 30 anos, foi morta a facadas na madrugada do dia 24 de janeiro em Novo Hamburgo, no Vale do Sinos. Natural de Butiá, na Região Carbonífera. Suas duas filhas — uma de 12 anos e outra bebê de oito meses — presenciaram o crime. O companheiro, de 31 anos, se entregou à polícia dois dias depois."
+                    onclick="openModal(this)">
+                    <span class="card-num">8</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Karizele Oliveira Senna.png -->
+                        <img src="./imagens/Karizele Oliveira Senna.png" alt="Karizele Oliveira Senna" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Karizele Oliveira Senna</span>
+                </div>
+
+                <!-- CARD 9 -->
+                <div class="card" data-num="9" data-name="Leila Raquel Camargo Feltrin"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Leila Raquel Camargo Feltrin.png"
+                    data-desc="Leila Raquel Camargo Feltrin, 25 anos, foi morta pelo companheiro após uma série de agressões na madrugada de 25 de janeiro, no bairro São Francisco, em Tramandaí, Litoral Norte gaúcho. Vizinhos relataram barulho e violência desde as 4h da manhã. O suspeito tentou fugir pulando muros, mas foi preso pela Brigada Militar. Deixou dois filhos pequenos."
+                    onclick="openModal(this)">
+                    <span class="card-num">9</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Leila Raquel Camargo Feltrin.png -->
+                        <img src="./imagens/Leila Raquel Camargo Feltrin.png" alt="Leila Raquel Camargo Feltrin" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Leila Raquel Camargo Feltrin</span>
+                </div>
+
+                <!-- CARD 10 -->
+                <div class="card" data-num="10" data-name="Paula Gomes Gonhi" data-category="Vítima de Feminicídio"
+                    data-img="./imagens/Paula Gomes Gonhi.png"
+                    data-desc="Paula Gomes Gonhi, 44 anos, foi morta com golpes de faca dentro de casa, em Santa Cruz do Sul, no Vale do Rio Pardo. O companheiro, de 31 anos, foi preso em flagrante. O filho de 17 anos presenciou o crime. De acordo com a Delegacia Especializada no Atendimento à Mulher, o autor desconfiava de traição."
+                    onclick="openModal(this)">
+                    <span class="card-num">10</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Paula Gomes Gonhi.png -->
+                        <img src="./imagens/Paula Gomes Gonhi.png" alt="Paula Gomes Gonhi" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Paula Gomes Gonhi</span>
+                </div>
+
+                <!-- CARD 11 -->
+                <div class="card" data-num="11" data-name="Marlei de Fátima Froelick"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Marlei de Fatima Froelick.png"
+                    data-desc="Marlei de Fátima Froelick, 53 anos, morreu em 30 de janeiro após ser alvejada com revólver em Novo Barreiro, no Norte gaúcho. A vítima estava com familiares em um automóvel e foi baleada ao descer para abrir o portão de seu sítio. O atirador, ex-companheiro de 57 anos, estava escondido no entorno da propriedade rural."
+                    onclick="openModal(this)">
+                    <span class="card-num">11</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Marlei de Fátima Froelick.png -->
+                        <img src="./imagens/Marlei de Fatima Froelick.png" alt="Marlei de Fátima Froelick" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Marlei de Fátima Froelick</span>
+                </div>
+
+                <!-- CARD 12 -->
+                <div class="card" data-num="12" data-name="Ianca Diniz Soares" data-category="Vítima de Feminicídio"
+                    data-img="./imagens/Ianca Diniz Soares.png"
+                    data-desc="Ianca Diniz Soares foi encontrada morta dentro de sua residência em São Francisco de Paula, na Serra gaúcha. Apresentava lesões provocadas por instrumento perfurocortante. O crime ocorreu na rua Padre Ritter, bairro Campo do Meio, e foi tratado pela Polícia Civil como feminicídio."
+                    onclick="openModal(this)">
+                    <span class="card-num">12</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Ianca Diniz Soares.png -->
+                        <img src="./imagens/Ianca Diniz Soares.png" alt="Ianca Diniz Soares" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Ianca Diniz Soares</span>
+                </div>
+
+                <!-- CARD 13 -->
+                <div class="card" data-num="13" data-name="Juliane Cristine Schuster"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Juliane Cristine Schuster.png"
+                    data-desc="Juliane Cristine Schuster, 30 anos, foi alvejada com revólver na Rua das Flores, interior de Santa Clara do Sul. Seu corpo foi encontrado com marcas de tiros em um banheiro. O autor seria um ex-namorado, que também atropelou o ex-marido dela com uma caminhonete. O atual companheiro de Juliane ficou hospitalizado em estado grave na UTI."
+                    onclick="openModal(this)">
+                    <span class="card-num">13</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Juliane Cristine Schuster.png -->
+                        <img src="./imagens/Juliane Cristine Schuster.png" alt="Juliane Cristine Schuster" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Juliane Cristine Schuster</span>
+                </div>
+
+                <!-- CARD 14 -->
+                <div class="card" data-num="14" data-name="Tereza de Jesus Trindade da Silva"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Tereza de Jesus Trindade da Silva.png"
+                    data-desc="Tereza de Jesus Trindade da Silva, 49 anos, morreu após dias internada em Roque Gonzales, no Noroeste gaúcho. Não resistiu aos ferimentos causados por tiros no rosto e no braço. O principal suspeito é o companheiro, que nega a autoria, mas está preso. Outro homem ainda não identificado também é investigado."
+                    onclick="openModal(this)">
+                    <span class="card-num">14</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Tereza de Jesus Trindade da Silva.png -->
+                        <img src="./imagens/Tereza de Jesus Trindade da Silva.png"
+                            alt="Tereza de Jesus Trindade da Silva" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Tereza de Jesus Trindade da Silva</span>
+                </div>
+
+                <!-- CARD 15 -->
+                <div class="card" data-num="15" data-name="Cláudia Rosane Casseres da Cunha"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Cláudia Rosane Casseres da Cunha.png"
+                    data-desc="Cláudia Rosane Casseres da Cunha era servidora municipal em Maçambará, na Fronteira Oeste, onde foi encontrada morta. Colegas estranharam sua ausência no trabalho e foram até sua casa, onde o corpo foi encontrado com ferimentos na cabeça e na boca. O companheiro fugiu, mas foi preso horas depois em um hotel em São Borja."
+                    onclick="openModal(this)">
+                    <span class="card-num">15</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Cláudia Rosane Casseres da Cunha.png -->
+                        <img src="./imagens/Cláudia Rosane Casseres da Cunha.png"
+                            alt="Cláudia Rosane Casseres da Cunha" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Cláudia Rosane Casseres da Cunha</span>
+                </div>
+
+                <!-- CARD 16 -->
+                <div class="card" data-num="16" data-name="Cássia Nascimento" data-category="Vítima de Feminicídio"
+                    data-img="./imagens/Cássia Nascimento.jpg"
+                    data-desc="Cássia Nascimento foi morta a tiros pelo ex-companheiro poucas horas depois de procurar a polícia para registrar um boletim de ocorrência e obter medida protetiva. O suspeito chegou a ser intimado, mas não respeitou a determinação e assassinou a jovem."
+                    onclick="openModal(this)">
+                    <span class="card-num">16</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Cássia Nascimento.jpg -->
+                        <img src="./imagens/Cássia Nascimento.jpg" alt="Cássia Nascimento" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Cássia Nascimento</span>
+                </div>
+
+                <!-- CARD 17 -->
+                <div class="card" data-num="17" data-name="Roseli Vanda Pires Albuquerque"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Roseli Vanda Pires Albuquerque.jpg"
+                    data-desc="Roseli Vanda Pires Albuquerque, ex-vereadora e diretora-administrativa da Secretaria de Esporte e Lazer do Rio Grande do Sul, foi morta na madrugada de sábado em seu apartamento. O ex-marido, Ari Albuquerque, que também foi encontrado morto, é investigado pelo crime."
+                    onclick="openModal(this)">
+                    <span class="card-num">17</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Roseli Vanda Pires Albuquerque.jpg -->
+                        <img src="./imagens/Roseli Vanda Pires Albuquerque.jpg" alt="Roseli Vanda Pires Albuquerque" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Roseli Vanda Pires Albuquerque</span>
+                </div>
+
+                <!-- CARD 18 -->
+                <div class="card" data-num="18" data-name="Glai Maria da Costa Conceição"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Glai Maria da Costa Conceição.png"
+                    data-desc="Glai Maria da Costa Conceição, 47 anos, foi encontrada morta na madrugada de 21 de fevereiro de 2026, em Mostardas, no Litoral Norte do RS. O corpo foi descoberto por um familiar na zona rural. Ela apresentava hematomas e suspeita de asfixia. O companheiro Cladimilson Dutra de Lima, 36 anos, ficou foragido com prisão preventiva decretada. Ele já havia sido preso em 2025 por agredir a vítima — mesmo com medidas protetivas, o casal retomou o relacionamento após sua soltura em fevereiro de 2026."
+                    onclick="openModal(this)">
+                    <span class="card-num">18</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Glai Maria da Costa Conceição.png -->
+                        <img src="./imagens/Glai Maria da Costa Conceição.png" alt="Glai Maria da Costa Conceição" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Glai Maria da Costa Conceição</span>
+                </div>
+
+                <!-- CARD 19 -->
+                <div class="card" data-num="19" data-name="Miriane Lacerda Vieira" data-category="Vítima de Feminicídio"
+                    data-img="./imagens/Miriane Lacerda Vieira.png"
+                    data-desc="Miriane Lacerda Vieira, 24 anos, natural de Arroio do Tigre, foi morta no início da tarde de 23 de fevereiro de 2026, dentro de sua casa em Ijuí, no Noroeste do estado. Ela foi atingida por golpes de arma branca. A principal suspeita é sua companheira, Maria Fernanda Morais Quevedo, 29 anos, que tentou tirar a própria vida após o crime. Havia indícios de separação — malas prontas foram encontradas na casa. Maria Fernanda foi indiciada por feminicídio e está presa na Penitenciária Modulada de Ijuí."
+                    onclick="openModal(this)">
+                    <span class="card-num">19</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Miriane Lacerda Vieira.png -->
+                        <img src="./imagens/Miriane Lacerda Vieira.png" alt="Miriane Lacerda Vieira" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Miriane Lacerda Vieira</span>
+                </div>
+
+                <!-- CARD 20 -->
+                <div class="card" data-num="20" data-name="Silvana Germann de Aguiar"
+                    data-category="Vítima de Feminicídio" data-img="./imagens/Silvana Germann de Aguiar.png"
+                    data-desc="Silvana Germann de Aguiar, 48 anos, foi vista pela última vez em 24 de janeiro de 2026, em Cachoeirinha, Região Metropolitana de Porto Alegre. Em 25 de fevereiro, a Polícia Civil passou a tratar o caso como feminicídio — a 20ª vítima do ano no RS. Seus pais, Isail e Dalmira, 69 e 70 anos, desapareceram no dia seguinte ao saírem para procurá-la e também são dados como mortos. O ex-companheiro Cristiano Domingues Francisco, 39 anos, policial militar afastado, é o único suspeito e está preso. Vestígios de sangue de duas pessoas foram encontrados na casa. O celular de Silvana foi localizado escondido, com as câmeras tapadas por fita isolante."
+                    onclick="openModal(this)">
+                    <span class="card-num">20</span>
+                    <div class="card-photo-wrap">
+                        <!-- AVISO: coloque a imagem em ./imagens/Silvana Germann de Aguiar.png -->
+                        <img src="./imagens/Silvana Germann de Aguiar.png" alt="Silvana Germann de Aguiar" />
+                    </div>
+                    <span class="card-label">Conheça ela</span>
+                    <span class="card-name">Silvana Germann de Aguiar</span>
+                </div>
+
+            </div><!-- /grid -->
+        </section>
+
+        <!-- ══════════════════════════════════════════
+       MODAL
+  ══════════════════════════════════════════ -->
+        <div class="modal-overlay" id="overlay" onclick="closeModal(event)">
+            <div class="modal-wrapper">
+                <div class="modal" id="modal">
+                    <div class="modal-handle"></div>
+                    <button class="modal-close" onclick="closeModal()">✕</button>
+                    <div class="modal-img-wrap">
+                        <img class="modal-banner" id="modal-img" src="" alt="" />
+                        <div class="modal-img-overlay"></div>
+                    </div>
+                    <div class="modal-body">
+                        <span class="modal-category" id="modal-cat"></span>
+                        <h2 class="modal-name" id="modal-name"></h2>
+                        <div class="modal-divider"></div>
+                        <p class="modal-desc" id="modal-desc"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+       SEÇÃO 3 — BANCO VERMELHO
+  ══════════════════════════════════════════ -->
+        <section class="banco-section">
+            <div class="banco-red-bar"></div>
+            <div class="banco-content">
+
+                <!-- imagem vem PRIMEIRO no HTML para o float funcionar corretamente -->
+                <div class="banco-img-col">
+                    <div class="banco-img-frame">
+                        <img src="banco-vermelho/banco vermelho.png.webp" alt="Banco Vermelho" class="banco-img" />
+                        <div class="banco-img-caption">Banco Vermelho — símbolo de memória e resistência</div>
+                    </div>
+                </div>
+
+                <div class="banco-text-col">
+                    <div class="banco-icon"></div>
+                    <h2 class="banco-title">Projeto Banco Vermelho</h2>
+                    <p class="banco-sub">Um símbolo internacional contra a violência de gênero</p>
+
+                    <p class="banco-text">
+                        O Banco Vermelho começou na Itália, em 2016, como símbolo de enfrentamento à violência
+                        contra a mulher e ao feminicídio. A iniciativa nasceu da dor de duas mulheres que perderam
+                        amigas vítimas de assassinato e decidiram transformar o luto em mobilização social.
+                    </p>
+                    <p class="banco-text">
+                        A cor <strong>vermelha</strong> simboliza o sangue derramado pelas vítimas e funciona
+                        como um alerta permanente sobre a gravidade da violência de gênero.
+                    </p>
+                    <p class="banco-text">
+                        Esta ação conjunta reúne a <strong>Procuradoria da Mulher da Câmara de Vereadores</strong>,
+                        o <strong>Gabinete da Primeira-dama</strong>, a <strong>Secretaria de Assistência
+                            Social</strong>
+                        e o <strong>Conselho Municipal de Direitos das Mulheres</strong>.
+                    </p>
+                    <p class="banco-text">
+                        O Banco Vermelho traz a reflexão sobre o espaço vazio deixado pelas mulheres que foram
+                        vítimas de feminicídio, e serve como memorial — oferecendo um ponto de reflexão
+                        sobre o problema.
+                    </p>
+
+                    <div class="banco-alert">
+                        <p class="banco-alert-title">Violência contra a mulher é crime!</p>
+                        <ul class="banco-numbers">
+                            <li><span class="num-badge">190</span> Polícia Militar — Emergência</li>
+                            <li><span class="num-badge">180</span> Central de Atendimento à Mulher</li>
+                            <li><span class="num-badge">197</span> Polícia Civil</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ══════════════════════════════════════════
+       RODAPÉ
+  ══════════════════════════════════════════ -->
+    <footer class="footer">
+        <p class="footer-symbol">♀</p>
+        <p class="footer-text">Cada nome aqui representa uma vida que importava.</p>
+        <p class="footer-text muted">Em memória de todas as vítimas do feminicídio no Brasil.</p>
+        <p class="footer-text">
+            <a href="https://www.instagram.com/enzo_lemes_c/" target="_blank"
+                style="text-decoration: none; color: red; font-size: 20px; font-weight: 600;">
+                @enzo_lemes_c © 2026
+            </a>
+        </p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
